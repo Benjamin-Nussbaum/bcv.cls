@@ -1,0 +1,36 @@
+\documentclass{bcv}
+
+\addbibresource{publications.bib}
+
+\name{Your}{Name}
+\email{you@example.com}
+\website{example.com}
+\github{octocat}
+\orcid{0000-0000-0000-0000}
+
+% ------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+% ------------------------------------------------------------------------------
+\section{Section heading}
+
+% Standard entry macro
+\cvitem{Degree/role title}{Note/brief description}{Location}{Start date--end date}
+
+% No formatting (can specify your own)
+\cvitem*{Degree/role title}{Note/brief description}{Location}{Start date--end date}
+
+% ------------------------------------------------------------------------------
+\section{Publications}
+
+\vspace{8pt}
+\nocite{*}
+
+\subsection*{Journal articles}
+\printbibliography[resetnumbers=true, heading=none, type=article]
+
+\subsection*{Conference proceedings}
+\printbibliography[resetnumbers=true, heading=none, type=inproceedings]
+
+\end{document}
